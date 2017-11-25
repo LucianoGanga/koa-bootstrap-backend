@@ -1,0 +1,6 @@
+# App Name
+environment: production
+
+# Endpoints
+endpoints:
+  - self: https://my-project.herokuapp.com

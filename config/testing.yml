@@ -1,0 +1,6 @@
+# Environment
+environment: testing
+
+# DB Connection string
+MONGO: mongodb://localhost/my-project-test
+

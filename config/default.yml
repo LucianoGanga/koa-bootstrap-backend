@@ -1,0 +1,37 @@
+# App Name
+appName: 'My KOA Backend project'
+port: 5000
+environment: development
+
+# Endpoints
+endpoints:
+  - self: http://localhost:5000
+
+# DB Connection string
+MONGO: mongodb://localhost/my-project
+
+# Winston logger
+winston:
+  levels:
+    debug: 5
+    info: 4
+    warn: 3
+    fail: 2
+    error: 1
+    fatal: 0
+  colors:
+    debug: blue
+    info: greenBright
+    warn: yellow
+    fail: yellow
+    error: red
+    fatal: bgRed
+  console:
+    level: debug
+    silent: false
+    colorize: true
+    handleExceptions: false
+  file:
+    level: warn
+    silent: false
+    filename: server.log

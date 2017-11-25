@@ -1,0 +1,99 @@
+{
+  "name": "landingnator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucianoGanga/landingnator.git"
+  },
+  "author": "Luciano Andrés Ganga Carabante",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LucianoGanga/landingnator/issues"
+  },
+  "homepage": "https://github.com/LucianoGanga/landingnator#readme",
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "bluebird": "^3.5.1",
+    "common-tags": "^1.4.0",
+    "config": "^1.28.1",
+    "js-yaml": "^3.10.0",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-morgan": "^1.0.1",
+    "koa-router": "^7.3.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.19.2",
+    "mongoose": "^4.13.2",
+    "require-directory": "^2.1.1",
+    "traverse": "^0.6.6",
+    "winston": "^2.4.0",
+    "winston-console-formatter": "^0.3.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "check-dependencies": "^1.1.0",
+    "cli-color": "^1.2.0",
+    "eslint": "^4.11.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1",
+    "nyc": "^11.3.0"
+  },
+  "standard": {
+    "globals": [
+      "app",
+      "config",
+      "describe",
+      "before",
+      "beforeEach",
+      "afterEach",
+      "after",
+      "it"
+    ]
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src/*"
+    ],
+    "ignoreRoot": [
+      ".git",
+      "coverage/**"
+    ]
+  },
+  "eslintConfig": {
+    "globals": {
+      "app": true
+    },
+    "extends": "standard",
+    "rules": {
+      "no-console": [
+        "error"
+      ],
+      "func-names": [
+        "error",
+        "as-needed"
+      ]
+    }
+  },
+  "nyc": {
+    "exclude": [
+      "!**/node_modules/"
+    ],
+    "include": [
+      "src/**/*.js"
+    ],
+    "reporter": [
+      "html"
+    ]
+  }
+}

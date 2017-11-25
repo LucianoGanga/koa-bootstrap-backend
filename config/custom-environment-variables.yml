@@ -1,0 +1,7 @@
+# DB Connection string
+MONGO: MONGO
+
+environment: NODE_ENV
+
+app:
+  serverPort: PORT
